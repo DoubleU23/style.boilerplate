@@ -1,4 +1,4 @@
-@mixin mq($name: 'mobile') {
+@mixin mq($name: 'all') {
 	@if( $mq == $name ) {
 		@content;
 	}

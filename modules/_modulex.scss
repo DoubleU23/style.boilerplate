@@ -1,4 +1,4 @@
-@include mq('mobile') {	
+@include mq('all') {
 	body::after {
 		content: 'moduleX WITHOUT MQ';
 	}

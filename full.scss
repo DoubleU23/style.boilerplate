@@ -1,19 +1,8 @@
-@charset "UTF-8";
+@import "inc/base";
 
-// html5 doctor css reset
-// @import "inc/reset";
-
-
-// FUNCTIONAL IMPORTS
-// 	like: mixins, functions and so on
-@import "inc/variables";
-@import "inc/mixins";
-
-@import "inc/helpers";
-
-$mq_mobile: 	'sreen or print';
-$mq_tablet: 	'sreen and (min-width: 640px)';
-$mq_desktop: 	'sreen and (min-width: 1024px)';
+$mq_mobile:     'sreen and (max-width: 640px)';
+$mq_tablet:     'sreen and (min-width: 641px)';
+$mq_desktop:    'sreen and (min-width: 1024px)';
 
 @font-face {
     font-family: 'TradeGothicLTStd';
@@ -26,12 +15,25 @@ $mq_desktop: 	'sreen and (min-width: 1024px)';
     font-style: normal;
 }
 
-@import "mq/mobile"; // = ALL !
+$mq: 'all' !global;
+@import "main.scss";
+
+@media #{$mq_mobile} {
+    $mq: 'mobile' !global;
+    @import "main.scss";
+}
 
 @media #{$mq_tablet} {
-	@import "mq/tablet";
+    $mq: 'tablet' !global;
+    @import "main.scss";
 }
 
 @media #{$mq_desktop} {
-	@import "mq/desktop";
+    $mq: 'desktop' !global;
+    @import "main.scss";
 }
+
+$mq: 'all' !global;
+// Hacks, Quickfix, Dirty Code...
+// http://lmgtfy.com/?q=shame.css
+@import "shame";

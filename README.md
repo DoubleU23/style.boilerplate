@@ -1,4 +1,7 @@
 # ToDo:
+update the doc (mq's changed ... import flow improved)
+
+
 find solution for importflow (reset, shame, ...) maybe put it in all/mobile MQ
 seperated files VS. full.scss
 

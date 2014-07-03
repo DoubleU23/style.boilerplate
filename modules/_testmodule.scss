@@ -1,12 +1,14 @@
-@include mq('mobile') {
+@include mq('all') {
 	@media screen and (min-width: 1px) {
 		body::after {
 			content: 'Testmodule in CUSTOM MQ';
 		}
 	}
-	
+}
+
+@include mq('mobile') {
 	body::after {
-		content: 'Testmodule in MOBILE (=WITHOUT) MQ';
+		content: 'Testmodule in MOBILE MQ';
 	}
 }
 

@@ -1,3 +1,6 @@
+// html5 doctor css reset
+@import "inc/reset";
+
 body {
 	@include mq {
 		color: blue;
@@ -11,7 +14,3 @@ body {
 // SO THE OVERWRITES ARE ONLY IN MODULE CONTEXT
 @import "modules/testmodule";
 @import "modules/modulex";
-
-// Hacks, Quickfix, Dirty Code...
-// http://lmgtfy.com/?q=shame.css
-@import "shame";
