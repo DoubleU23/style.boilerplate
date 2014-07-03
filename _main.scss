@@ -1,0 +1,17 @@
+body {
+	@include mq {
+		color: blue;
+	}
+	@include mq('desktop') {
+		color: red;
+	}
+}
+
+// MODULES ARE IMPORTED AT LAST
+// SO THE OVERWRITES ARE ONLY IN MODULE CONTEXT
+@import "modules/testmodule";
+@import "modules/modulex";
+
+// Hacks, Quickfix, Dirty Code...
+// http://lmgtfy.com/?q=shame.css
+@import "shame";

@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+// html5 doctor css reset
+// @import "inc/reset";
+
+
+// FUNCTIONAL IMPORTS
+// 	like: mixins, functions and so on
+@import "inc/variables";
+@import "inc/mixins";
+
+@import "inc/helpers";
+
+$mq_mobile: 	'sreen or print';
+$mq_tablet: 	'sreen and (min-width: 640px)';
+$mq_desktop: 	'sreen and (min-width: 1024px)';
+
+@font-face {
+    font-family: 'TradeGothicLTStd';
+    src: url('../assets/fonts/TradeGothicLTStd-BdCn20.eot');
+    src: local('☺'),
+    url('../assets/fonts/TradeGothicLTStd-BdCn20.woff') format('woff'),
+    url('../assets/fonts/TradeGothicLTStd-BdCn20.ttf') format('truetype'),
+    url('../assets/fonts/TradeGothicLTStd-BdCn20.svg#TradeGothicLTStd') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import "mq/mobile"; // = ALL !
+
+@media #{$mq_tablet} {
+	@import "mq/tablet";
+}
+
+@media #{$mq_desktop} {
+	@import "mq/desktop";
+}

@@ -1,0 +1,24 @@
+@include mq('mobile') {
+	@media screen and (min-width: 1px) {
+		body::after {
+			content: 'Testmodule in CUSTOM MQ';
+		}
+	}
+	
+	body::after {
+		content: 'Testmodule in MOBILE (=WITHOUT) MQ';
+	}
+}
+
+@include mq('tablet') {
+	body::after {
+		content: 'Testmodule in TABLET MQ';
+	}
+}
+
+@include mq('desktop') {
+	body::after {
+		content: 'Testmodule in DESKTOP MQ';
+	}
+}
+
