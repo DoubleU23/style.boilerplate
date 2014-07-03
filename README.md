@@ -2,7 +2,7 @@
 find solution for importflow (reset, shame, ...) maybe put it in all/mobile MQ
 seperated files VS. full.scss
 
-# BAWAG CROWDFUNDING  - SASS-GUIDE
+# SASS-Boilerplate Documentation
 [TOC]
 
 ## MQ's in use:
