@@ -1,4 +1,4 @@
 TODO:
 
-
-dont know how to handle shame.css
+don’t know how to handle shame.css
+—> i think we should discuss it in a meeting!
