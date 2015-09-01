@@ -37,9 +37,8 @@ for the desktop view
 __usage:__
 ```
 body {
-	color:
 	@include mq('desktop') { color: red; }
-	@include mq('desktop') { color: red; }
+	@include mq('mobile') { color: red; }
 }
 ```
 __OR__
