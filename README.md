@@ -1,5 +1,6 @@
 # ToDo:
 * Clean Documentation
+* split open and closed versions
 * extend the mixins
 * test/improve the ability for Backbone/Foundation Boilerplate implementation
 * update the doc (mq's changed ... import flow improved)
@@ -40,6 +41,15 @@ body {
 	@include mq('desktop') { color: red; }
 	@include mq('desktop') { color: red; }
 }
+```
+__OR__
+```
+@include mq('desktop') {
+	body {
+		color: red;
+	}
+}
+
 ```
 
 ## FILES
