@@ -1,9 +1,10 @@
 # ToDo:
-update the doc (mq's changed ... import flow improved)
-
-
-find solution for importflow (reset, shame, ...) maybe put it in all/mobile MQ
-seperated files VS. full.scss
+* Clean Documentation
+* extend the mixins
+* test/improve the ability for Backbone/Foundation Boilerplate implementation
+* update the doc (mq's changed ... import flow improved)
+* find solution for importflow (reset, shame, ...) maybe put it in all/mobile MQ
+* seperated files VS. full.scss
 
 # SASS-Boilerplate Documentation
 [TOC]
