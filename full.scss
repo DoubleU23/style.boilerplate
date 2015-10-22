@@ -4,16 +4,6 @@ $mq_mobile:     'sreen and (max-width: 640px)';
 $mq_tablet:     'sreen and (min-width: 641px)';
 $mq_desktop:    'sreen and (min-width: 1024px)';
 
-@font-face {
-    font-family: 'TradeGothicLTStd';
-    src: url('../assets/fonts/TradeGothicLTStd-BdCn20.eot');
-    src: local('☺'),
-    url('../assets/fonts/TradeGothicLTStd-BdCn20.woff') format('woff'),
-    url('../assets/fonts/TradeGothicLTStd-BdCn20.ttf') format('truetype'),
-    url('../assets/fonts/TradeGothicLTStd-BdCn20.svg#TradeGothicLTStd') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
 
 $mq: 'all' !global;
 @import "main.scss";
