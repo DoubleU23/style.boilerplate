@@ -1,0 +1,25 @@
+@import "inc/base"
+
+$mq_mobile      = 'sreen and (max-width: 640px)'
+$mq_tablet      = 'sreen and (min-width: 641px)'
+$mq_desktop     = 'sreen and (min-width: 1024px)'
+
+$mq = 'all'
+@import "main.scss"
+
+@media #{$mq_mobile}
+    $mq = 'mobile'
+    @import "main.scss"
+
+@media #{$mq_tablet}
+    $mq = 'tablet'
+    @import "main.scss"
+
+@media #{$mq_desktop}
+    $mq = 'desktop'
+    @import "main.scss"
+
+$mq = 'all'
+// Hacks, Quickfix, Dirty Code...
+// http://lmgtfy.com/?q=shame.css
+@import "shame"
