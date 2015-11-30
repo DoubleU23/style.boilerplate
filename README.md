@@ -1,92 +1,72 @@
-# ToDo:
-* Clean Documentation
-* split open and closed versions
-* extend the mixins
-* test/improve the ability for Backbone/Foundation Boilerplate implementation
-* update the doc (mq's changed ... import flow improved)
-* find solution for importflow (reset, shame, ...) maybe put it in all/mobile MQ
-* seperated files VS. full.scss
+# DoubleU23 - Stylus lib  
+> Stylus mixins, utilities, helpers, ...
 
-# SASS-Boilerplate Documentation
-[TOC]
+## to do:  
+@import 'doubleu23-stylus/mqs'  
+to import MQ mixin + vars
 
-## MQ's in use:
-__CAUTION ! IE8 has no MQ's - just a min-width__
+## Installation
 
-__Small (=All)__  
-because we are working with "mobile first" this is the MQ's that's loaded for all Clients  
-> no MQ to use
-
-__Medium__  
-for all tablet devices
-> sreen and (min-width: 640px)
-
-__Large__  
-for the desktop view
-> screen and (min-width: 1024px)
-
-<a name="mq_mixin"></a>
-## The MQ mixin
+```bash
+$ npm install doubleu23-stylus
 ```
-@mixin mq($name) {
-	@if( $mq == $name ) {
-		@content;
+
+## JavaScript API
+
+__with connect/express:__
+```javascript
+var connect = require('connect')
+  , stylus = require('stylus')
+  , doubleu23Stylus = require('doubleu23-stylus');
+
+var server = connect();
+
+function compile(str, path) {
+  return stylus(str)
+	.set('filename', path)
+	.set('compress', true)
+	.use(doubleu23Stylus());
+}
+
+server.use(stylus.middleware({
+	src: __dirname
+  , compile: compile
+}));
+```
+
+__with webpack:__
+```javascript
+var doubleu23Stylus 	= require('doubleu23-stylus')
+,	config = {
+		[...]
+		stylus: {
+			use: [doubleu23Stylus()]
+		}
 	}
-}
-```
-__usage:__
-```
-body {
-	@include mq('desktop') { color: red; }
-	@include mq('mobile') { color: red; }
-}
-```
-__OR__
-```
-@include mq('desktop') {
-	body {
-		color: red;
-	}
-}
-
+;
 ```
 
-## FILES
+## Stylus API
 
-### /inc
-This is the order in wich they will be included into the _main.scss
+  To gain access to everything nib has to offer, simply add:
 
-__/inc/_reset.scss__  
-html5 doctor css reset - 
-[http://html5doctor.com/html-5-reset-stylesheet](http://html5doctor.com)  
+  ```css
+  @import 'doubleu23-stylus'
+  ```
 
-__/inc/_variables.scss__  
-Yes... This is the File were we put all variables  
-We could also put it in /_main.scss but i think configuration should be seperated from the code
+  Or you may also pick and choose based on the directory structure in `./lib`, for example:
 
-__/inc/_mixins.scss__  
-Here are the functional definitions of the mixins and the functions
+  ```css
+  @import 'doubleu23-stylus/reset'
+  @import 'doubleu23-stylus/variables'
+  @import 'doubleu23-stylus/mixins'
+  ```
 
-__/inc/_helpers.scss__  
-helpers like clearfix, border box model, and margin auto ...  
-These classes can be uses either as normal CSS-class or as an @extend argugment
+_To be continued..._
 
-### /mq
-__/mq/_mobile.scss__, __/mq/_tablet.scss__, __/mq/_dektop.scss__
-> The mobile file could also be named "all.scss" because it is loaded for every device  
-=> [__mobile first__](http://lmgtfy.com?q=mobile+first)
+## More Information
 
-These are the MQ-specific files. Each MQ in it's own file because of two reasons:  
+## Testing - to be done
 
-* We need to set the context per `$mq` variable  
-	This variable is recognized by the `mq()` mixin used in _main.scss and /modules/*.scss  
-	See [MQ-mixin](#mq_mixin)
-	
-* Because we have the MQ's in seperate files  
-	we can __set the media queries directly in the `<link>`-Tag__ in our HTML header.  
-	This __prevents that mobile devices have to load the full CSS__ code for all MQ  
-	( WOW! very fast! such performance! )
-```
-<link rel="alternate" media="only screen and (min-width: 640px)" href="/css/tablet.css">  
-<link rel="alternate" media="only screen and (min-width: 1024px)" href="/css/desktop.css">
-```
+## Contributors
+  - [Stefan Friedl](https://github.com/DoubleU23) (Original Creator)
