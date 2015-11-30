@@ -1,6 +1,9 @@
 # DoubleU23 - Stylus lib  
 > Stylus mixins, utilities, helpers, ...
 
+## Changelog:
+0.1.1 - ready for Stylus.use() API
+
 ## to do:  
 @import 'doubleu23-stylus/mqs'  
 to import MQ mixin + vars
