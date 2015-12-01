@@ -2,8 +2,34 @@
 > Stylus mixins, utilities, helpers, ...
 
 ## to do:  
-@import 'doubleu23-stylus/mqs'  
-to import MQ mixin + vars
+* set paths
+* autoimport the lib
+* MQ mixin+vars ONLY `.import '/mqs'`
+* refactor scss leftovers
+* load shared vars from JS file into `inc/variables.styl`
+* change name (working title)
+
+## Usage
+```Stylus
+// tbd - autoimport
+@require 'doubleu23-stylus'
+
+html,
+body
+  font-size mFontSize
+  +MQ('tablet')
+    font-size tFontSize
+  +MQ('desktop')
+    font-size dFontSize
+
++MQ('tablet')
+  .wrapper
+    width 100%
+
++MQ('desktop')
+  #page
+    @extend .wrapper
+```
 
 ## Installation
 
@@ -51,15 +77,16 @@ var doubleu23Stylus 	= require('doubleu23-stylus')
   To gain access to everything nib has to offer, simply add:
 
   ```css
-  @import 'doubleu23-stylus'
+  .import 'doubleu23-stylus'
   ```
 
   Or you may also pick and choose based on the directory structure in `./lib`, for example:
 
   ```css
-  @import 'doubleu23-stylus/reset'
-  @import 'doubleu23-stylus/variables'
-  @import 'doubleu23-stylus/mixins'
+  // tbd - .import '/MQ'
+  .import 'doubleu23-stylus/reset'
+  .import 'doubleu23-stylus/variables'
+  .import 'doubleu23-stylus/mixins'
   ```
 
 _To be continued..._
