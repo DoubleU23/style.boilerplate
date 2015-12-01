@@ -69,4 +69,4 @@ _To be continued..._
 ## Testing - to be done
 
 ## Contributors
-  - [Stefan Friedl](https://github.com/DoubleU23) (Original Creator)
+  - [DoubleU23](https://github.com/DoubleU23) (Original Creator)
