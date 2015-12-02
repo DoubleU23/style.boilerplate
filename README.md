@@ -1,12 +1,13 @@
 # DoubleU23 - Stylus lib  
 > Stylus mixins, utilities, helpers, ...
 
-## to do:  
+## to be done  
 * set paths
 * autoimport the lib
 * MQ mixin+vars ONLY `.import '/mqs'`
 * refactor scss leftovers
 * load shared vars from JS file into `inc/variables.styl`
+* testing
 * change name (working title)
 
 ## Usage
@@ -74,7 +75,7 @@ var doubleu23Stylus 	= require('doubleu23-stylus')
 
 ## Stylus API
 
-  To gain access to everything nib has to offer, simply add:
+To gain access to everything it has to offer, simply add:
 
   ```css
   .import 'doubleu23-stylus'
@@ -84,9 +85,9 @@ var doubleu23Stylus 	= require('doubleu23-stylus')
 
   ```css
   // tbd - .import '/MQ'
-  .import 'doubleu23-stylus/reset'
-  .import 'doubleu23-stylus/variables'
-  .import 'doubleu23-stylus/mixins'
+  .import 'doubleu23-stylus/inc/reset'
+  .import 'doubleu23-stylus/inc/variables'
+  .import 'doubleu23-stylus/inc/mixins'
   ```
 
 _To be continued..._
