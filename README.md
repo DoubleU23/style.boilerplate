@@ -5,8 +5,41 @@ The main feature is the [MQ mixin](#mq-mixin)
 
 ## Changelog:
 0.1.1 - ready for Stylus.use() API  
-0.1.4 - enabled [MQ's only import](#stylus-imports)
+0.1.7 - enabled [MQ's only import](#stylus-imports)  
 
+<<<<<<< HEAD
+=======
+## to be done  
+* set paths
+* autoimport the lib
+* MQ mixin+vars ONLY `.import '/mqs'`
+* refactor scss leftovers
+* load shared vars from JS file into `inc/variables.styl`
+* testing
+* change name (working title)
+
+## Usage
+```Stylus
+// tbd - autoimport
+@require 'doubleu23-stylus'
+
+html,
+body
+  font-size mFontSize
+  +MQ('tablet')
+    font-size tFontSize
+  +MQ('desktop')
+    font-size dFontSize
+
++MQ('tablet')
+  .wrapper
+    width 100%
+
++MQ('desktop')
+  #page
+    @extend .wrapper
+```
+>>>>>>> 238e0c7b741db7ee9fd883af18e15fe2ef42343e
 
 ## Installation
 
@@ -51,16 +84,27 @@ var doubleu23Stylus 	= require('doubleu23-stylus')
 
 ## Stylus Imports
 
+<<<<<<< HEAD
   To gain access to everything the lib has to offer, simply add:
+=======
+To gain access to everything it has to offer, simply add:
+>>>>>>> 238e0c7b741db7ee9fd883af18e15fe2ef42343e
 
   ```css
-  @import 'doubleu23-stylus'
+  .import 'doubleu23-stylus'
   ```
 
   Or you may also pick only the MQ Vars and Mixins
 
   ```css
+<<<<<<< HEAD
   @import 'doubleu23-stylus/mq'
+=======
+  // tbd - .import '/MQ'
+  .import 'doubleu23-stylus/inc/reset'
+  .import 'doubleu23-stylus/inc/variables'
+  .import 'doubleu23-stylus/inc/mixins'
+>>>>>>> 238e0c7b741db7ee9fd883af18e15fe2ef42343e
   ```
 
 ## MQ-Mixin
@@ -97,4 +141,4 @@ _To be continued..._
 TBD
 
 ## Contributors
-  - [Stefan Friedl](https://github.com/DoubleU23) (Original Creator)
+  - [DoubleU23](https://github.com/DoubleU23) (Original Creator)
