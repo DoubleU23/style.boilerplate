@@ -1,7 +1,7 @@
 {
   "name": "doubleu23-stylus",
-  "version": "0.1.3",
-  "description": "A little collection of mixins helpers and some other stuff",
+  "version": "0.1.4",
+  "description": "A little collection of mixins helpers and some other stuff (MQ support)",
   "main": "lib/doubleu23-stylus.js",
   "scripts": {
     "test": "npm test"
