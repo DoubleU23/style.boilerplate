@@ -6,6 +6,11 @@ The main feature is the [MQ mixin](#mq-mixin)
 ## Changelog:
 0.1.1 - ready for Stylus.use() API  
 0.1.7 - enabled [MQ's only import](#stylus-imports)  
+0.1.8 - prefixed the vars - $p23_varname
+
+### Roadmap
+* better names
+* testing (per ?mocha) if all imports and mixins are working
 
 <<<<<<< HEAD
 =======
