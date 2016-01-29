@@ -5,23 +5,19 @@ The main feature is the [MQ mixin](#mq-mixin)
 
 ## Changelog:
 0.1.1 - ready for Stylus.use() API  
-0.1.7 - enabled [MQ's only import](#stylus-imports)  
-0.1.8 - prefixed the vars - $p23_varname
+0.1.8 - prefixed the vars - $p23_varname  
+0.1.9 - stable [MQ's only import](#stylus-imports)  
 
 ### Roadmap
-* better names
-* testing (per ?mocha) if all imports and mixins are working
+* change working title
+* testing (per ?mocha) if all imports and mixins are working  
+* user should be able to overwrite MQ breakpoints  
+* testing?  
+* imports? paths?
 
-<<<<<<< HEAD
-=======
 ## to be done  
-* set paths
-* autoimport the lib
-* MQ mixin+vars ONLY `.import '/mqs'`
+* autoimport the mqs !?!?!?
 * refactor scss leftovers
-* load shared vars from JS file into `inc/variables.styl`
-* testing
-* change name (working title)
 
 ## Usage
 ```Stylus
@@ -44,7 +40,6 @@ body
   #page
     @extend .wrapper
 ```
->>>>>>> 238e0c7b741db7ee9fd883af18e15fe2ef42343e
 
 ## Installation
 
@@ -87,29 +82,15 @@ var doubleu23Stylus 	= require('doubleu23-stylus')
 ;
 ```
 
-## Stylus Imports
-
-<<<<<<< HEAD
-  To gain access to everything the lib has to offer, simply add:
-=======
-To gain access to everything it has to offer, simply add:
->>>>>>> 238e0c7b741db7ee9fd883af18e15fe2ef42343e
-
-  ```css
+## Stylus Imports  
+To gain access to everything the lib has to offer, simply add:  
+  ```stylus
   .import 'doubleu23-stylus'
   ```
-
   Or you may also pick only the MQ Vars and Mixins
 
-  ```css
-<<<<<<< HEAD
-  @import 'doubleu23-stylus/mq'
-=======
-  // tbd - .import '/MQ'
-  .import 'doubleu23-stylus/inc/reset'
-  .import 'doubleu23-stylus/inc/variables'
-  .import 'doubleu23-stylus/inc/mixins'
->>>>>>> 238e0c7b741db7ee9fd883af18e15fe2ef42343e
+  ```stylus
+  @import 'doubleu23-stylus/mqs'
   ```
 
 ## MQ-Mixin
@@ -134,11 +115,6 @@ To gain access to everything it has to offer, simply add:
 		margin-right 1px
 ```
 > **to avoid duplicate mediaqueries i use '[node-css-mqpacker](https://github.com/hail2u/node-css-mqpacker)' in my webpack setup**
-
-## Roadmap  
-* user should be able to overwrite MQ breakpoints
-* testing?
-* imports? (paths)
 
 _To be continued..._
 
