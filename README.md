@@ -8,6 +8,7 @@ The main feature is the [MQ mixin](#mq-mixin)
 0.1.8 - prefixed the vars - $p23_varname  
 0.2.0 - stable [MQ's only import](#stylus-imports)  
 0.2.1 - injects process.env.NODE_ENV into stylus (global var $ENV__NODE_ENV)
+0.2.2 - added assetPath() to use 'process.env.ROOT_PATH' as url-prefix
 
 ### Roadmap
 * change working title
