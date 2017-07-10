@@ -8,7 +8,12 @@ The main feature is the [MQ mixin](#mq-mixin)
 0.1.8 - prefixed the vars - $p23_varname  
 0.2.0 - stable [MQ's only import](#stylus-imports)  
 0.2.1 - injects process.env.NODE_ENV into stylus (global var $ENV__NODE_ENV)
-0.2.3 - added assetPath() to use 'process.env.ROOT_PATH' as url-prefix
+0.2.3 - added assetPath() to use 'process.env.ROOT_PATH' as url-prefix  
+
+0.3.0 - doubleu23-stylus now accepts options (envVars, envPrefix, imgUrlPrefix)
+removed leftovers + some refactoring
+
+1.0.0 - **TBD:** release with new (final) name
 
 ### Roadmap
 * change working title
@@ -16,11 +21,11 @@ The main feature is the [MQ mixin](#mq-mixin)
 * user should be able to overwrite MQ breakpoints  
 * testing?  
 * imports? paths?
-* let user define which process.env vars should be injected + varPrefix
+* ~~let user define which process.env vars should be injected + varPrefix~~
 
-## to be done  
-* autoimport the mqs !?!?!?
-* refactor scss leftovers
+## to be considered/refactored
+* autoinclude lib?
+* style.set('filename')?
 
 ## Usage
 ```Stylus
@@ -75,11 +80,17 @@ server.use(stylus.middleware({
 
 __with webpack:__
 ```javascript
-var doubleu23Stylus 	= require('doubleu23-stylus')
-,	config = {
+var options             = {
+    // these are the defaults
+        envVars:        process.env
+    ,   envPrefix:      '$ENV__'
+    ,   imgUrlPrefix:   process.env.ROOT_PATH + '/assets' // TBD
+    }
+,   doubleu23Stylus     = require('doubleu23-stylus')
+,	config              = {
 		[...]
 		stylus: {
-			use: [doubleu23Stylus()]
+			use: [doubleu23Stylus(options)]
 		}
 	}
 ;
@@ -93,6 +104,7 @@ To gain access to everything the lib has to offer, simply add:
   Or you may also pick only the MQ Vars and Mixins
 
   ```stylus
+  // not necessary, because of auto-include
   @import 'doubleu23-stylus/mqs'
   ```
 
@@ -118,11 +130,6 @@ To gain access to everything the lib has to offer, simply add:
 		margin-right 1px
 ```
 > **to avoid duplicate mediaqueries i use '[node-css-mqpacker](https://github.com/hail2u/node-css-mqpacker)' in my webpack setup**
-
-_To be continued..._
-
-### More Information  
-TBD
 
 ## Contributors
   - [DoubleU23](https://github.com/DoubleU23) (Original Creator)
