@@ -60,8 +60,14 @@ $ npm install doubleu23-stylus
 __with connect/express:__
 ```javascript
 var connect = require('connect')
-  , stylus = require('stylus')
-  , doubleu23Stylus = require('doubleu23-stylus');
+,   stylus = require('stylus')
+,   doubleu23Stylus = require('doubleu23-stylus')
+,   options             = {
+    // these are the defaults
+        envVars:        process.env
+    ,   envPrefix:      '$ENV__'
+    ,   imgUrlPrefix:   process.env.ROOT_PATH + '/assets' // TBD
+    }
 
 var server = connect();
 
@@ -69,7 +75,7 @@ function compile(str, path) {
   return stylus(str)
 	.set('filename', path)
 	.set('compress', true)
-	.use(doubleu23Stylus());
+	.use(doubleu23Stylus(options));
 }
 
 server.use(stylus.middleware({
