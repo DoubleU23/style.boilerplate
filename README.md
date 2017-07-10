@@ -4,16 +4,16 @@ The main feature is the [MQ mixin](#mq-mixin)
 
 
 ## Changelog:
-0.1.1 - ready for Stylus.use() API  
-0.1.8 - prefixed the vars - $p23_varname  
-0.2.0 - stable [MQ's only import](#stylus-imports)  
-0.2.1 - injects process.env.NODE_ENV into stylus (global var $ENV__NODE_ENV)  
-0.2.3 - added assetPath() to use 'process.env.ROOT_PATH' as url-prefix  
+**0.1.1** - ready for Stylus.use() API  
+**0.1.8** - prefixed the vars - $p23_varname  
+**0.2.0** - stable [MQ's only import](#stylus-imports)  
+**0.2.1** - injects process.env.NODE_ENV into stylus (global var $ENV__NODE_ENV)  
+**0.2.3** - added assetPath() to use 'process.env.ROOT_PATH' as url-prefix  
 
-0.3.0 - doubleu23-stylus now accepts options (envVars, envPrefix, imgUrlPrefix)  
+**0.3.0** - doubleu23-stylus now accepts options (envVars, envPrefix, imgUrlPrefix)  
 removed leftovers + some refactoring  
 
-1.0.0 - **TBD:** release with new (final) name
+**1.0.0** - **TBD:** release with new (final) name
 
 ### Roadmap
 * change working title
