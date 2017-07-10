@@ -102,7 +102,7 @@ var options             = {
             use:        [doubleu23Stylus(options)]
         }
     }
-,	  config              = {
+,   config              = {
         module: {
             rules: [
                 {
