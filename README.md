@@ -126,14 +126,15 @@ var options             = {
 ```
 
 ## Stylus Imports  
+> **not necessary, because of auto-include**
+
 To gain access to everything the lib has to offer, simply add:  
   ```stylus
-  .import 'doubleu23-stylus'
+  @import 'doubleu23-stylus'
   ```
   Or you may also pick only the MQ Vars and Mixins
 
   ```stylus
-  // not necessary, because of auto-include
   @import 'doubleu23-stylus/mqs'
   ```
 
