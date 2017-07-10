@@ -59,9 +59,10 @@ $ npm install doubleu23-stylus
 
 __with connect/express:__
 ```javascript
-var connect = require('connect')
-,   stylus = require('stylus')
-,   doubleu23Stylus = require('doubleu23-stylus')
+var connect             = require('connect')
+,   server              = connect()
+,   stylus              = require('stylus')
+,   doubleu23Stylus     = require('doubleu23-stylus')
 ,   options             = {
     // these are the defaults
         envVars:        process.env
@@ -69,19 +70,19 @@ var connect = require('connect')
     ,   imgUrlPrefix:   process.env.ROOT_PATH + '/assets' // TBD
     }
 
-var server = connect();
-
 function compile(str, path) {
-  return stylus(str)
-	.set('filename', path)
-	.set('compress', true)
-	.use(doubleu23Stylus(options));
+    return stylus(str)
+        .set('filename', path)
+        .set('compress', true)
+        .use(doubleu23Stylus(options))
 }
 
+// don't ask! (copied from "nib")
+// may be out of date
 server.use(stylus.middleware({
-	src: __dirname
-  , compile: compile
-}));
+    src:      __dirname
+,   compile:  compile
+}))
 ```
 
 __with webpack:__
@@ -93,13 +94,35 @@ var options             = {
     ,   imgUrlPrefix:   process.env.ROOT_PATH + '/assets' // TBD
     }
 ,   doubleu23Stylus     = require('doubleu23-stylus')
-,	config              = {
-		[...]
-		stylus: {
-			use: [doubleu23Stylus(options)]
-		}
-	}
-;
+,   stylusLoaderDef     = {
+        loader: 'stylus-loader',
+        options: {
+            sourceMap:  true,
+            compress:   isDevelopment,
+            use:        [doubleu23Stylus(options)]
+        }
+    }
+,	  config              = {
+        module: {
+            rules: [
+                {
+                    test: /\.styl$/,
+                    use: isDevelopment ? [
+                        { loader: 'style-loader',   options: { sourceMap: true } },
+                        { loader: 'css-loader',     options: { sourceMap: true } },
+                        { loader: 'postcss-loader', options: { sourceMap: true } },
+                        stylusLoaderDef
+                    ]
+                    // for production (https://github.com/webpack-contrib/extract-text-webpack-plugin)
+                    : ExtractTextPlugin.extract({
+                        fallback: 'style-loader',
+                        use: ['css-loader', 'postcss-loader', stylusLoaderDef]
+                    })
+                }
+            ]
+        }
+    }
+
 ```
 
 ## Stylus Imports  
