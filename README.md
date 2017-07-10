@@ -140,24 +140,24 @@ To gain access to everything the lib has to offer, simply add:
 
 ## MQ-Mixin
 ```stylus
-	// use it on top of selectors
-	body
-		font-size 12px
-	+MQ('tablet')
-		body
-			font-size 14px
-	+MQ('deskop')
-		body
-			font-size 16px
+// use it on top of selectors
+body
+    font-size 12px
++MQ('tablet')
+    body
+      font-size 14px
++MQ('deskop')
+    body
+        font-size 16px
 
-	// or use the mixin beetween the properties
-	body
-		font-size 12px
-		+MQ('tablet')
-			font-size 14px
-		+MQ('deskop')
-			font-size 16px 50px 10px
-		margin-right 1px
+// or use the mixin beetween the properties
+body
+    font-size 12px
+    +MQ('tablet')
+        font-size 14px
+    +MQ('deskop')
+        font-size 16px 50px 10px
+    margin-right 1px
 ```
 > **to avoid duplicate mediaqueries i use '[node-css-mqpacker](https://github.com/hail2u/node-css-mqpacker)' in my webpack setup**
 
