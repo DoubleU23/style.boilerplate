@@ -19,6 +19,8 @@ removed leftovers + some refactoring
 * shows Error div on top of page if an undefined MQ name is used
 * ALWAYS (!) inject NODE_ENV (both ways: $ENV__NODE_ENV and {envPrefix + 'NODE_ENV'})
 
+**1.0.1** - fixxed: indentation errors (removed tabs)  
+
 **1.x.y** - **TBD:** release with new (final) name
 
 ### Roadmap

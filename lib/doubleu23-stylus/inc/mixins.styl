@@ -19,10 +19,10 @@ MQ(name='all')
         @media mediaString
             {block}
     else
-    	// show error on top of page if MQ is not defined
+        // show error on top of page if MQ is not defined
         if $ENV__NODE_ENV is not 'production'
-	        // ^[0]=ROOT / initial reference
-	        // => http://stylus-lang.com/docs/selectors.html#initial-reference
+            // ^[0]=ROOT / initial reference
+            // => http://stylus-lang.com/docs/selectors.html#initial-reference
             ^[0]:before
                 display block !important;
                 color #fff !important;
