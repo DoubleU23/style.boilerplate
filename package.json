@@ -1,6 +1,6 @@
 {
   "name": "doubleu23-stylus",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A little collection of mixins helpers and some other stuff",
   "main": "lib/doubleu23-stylus.js",
   "scripts": {
