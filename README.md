@@ -15,7 +15,7 @@ removed leftovers + some refactoring
 
 **1.0.0** - **breaking changes:**  
 * renamed mq variables ($stylus_mq_{name})  
-* allows to pass mediaQueries per options (see@[JavaScript API](#javascript-api))  
+* allows to pass mediaQueries per options ([#JavaScript API](#javascript-api))  
 * shows Error div on top of page if an undefined MQ name is used
 * ALWAYS (!) inject NODE_ENV (both ways: $ENV__NODE_ENV and {envPrefix + 'NODE_ENV'})
 
