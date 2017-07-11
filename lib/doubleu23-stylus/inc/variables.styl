@@ -1,14 +1,9 @@
 /**
- *	MEDIA QUERY VARS
- *		used in MQ() mixin
+ *  MEDIA QUERY VARS
+ *      used in MQ() mixin
  */
-$p23_mq_mobile      = 'only screen and (max-width: 640px)' // unless $p23_mq_mobile is a string
-$p23_mq_tablet      = 'only screen and (min-width: 768px)'
-$p23_mq_desktop     = 'only screen and (min-width: 1024px)'
-
-$p23_mqs = {
-  'all'		: 'only screen',
-  'mobile'	: $p23_mq_mobile,
-  'tablet'	: $p23_mq_tablet,
-  'desktop'	: $p23_mq_desktop
-}
+$stylus_mq_xs ?= 'only screen and (max-width: 333px)'
+$stylus_mq_s  ?= 'only screen and (min-width: 640px)'
+$stylus_mq_m  ?= 'only screen and (min-width: 768px)'
+$stylus_mq_l  ?= 'only screen and (min-width: 1024px)'
+$stylus_mq_xl ?= 'only screen and (min-width: 1200px)'

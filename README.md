@@ -13,12 +13,25 @@ The main feature is the [MQ mixin](#mq-mixin)
 removed leftovers + some refactoring  
 **0.3.1** - removed auto-import and pushed doubleu23-stylus into import paths
 
-**1.0.0** - **TBD:** release with new (final) name
+**1.0.0** - **breaking changes:**  
+* renamed mq variables  
+* allows to pass mediaQueries per options  
+* shows Error div on top of page if an undefined MQ name is used
+* ALWAYS (!) inject NODE_ENV (both ways: $ENV__NODE_ENV and {envPrefix + 'NODE_ENV'})
+* 
+
+**1.x.y** - **TBD:** release with new (final) name
 
 ### Roadmap
-* change package title
+* extended README  
+  * migration to 1.0.0  
+  * more infos for MQ mixin  
+  * describe file contents of /inc/*  
+* seperated MQ files (see oldREADME) + documentation in README  
+* refactor "imgUrlPrefix"  
+* change package title  
 * testing (per ?mocha) if all imports and mixins are working  
-* user should be able to overwrite MQ breakpoints  (extend options)
+* user should be able to overwrite MQ breakpoints  (extend options)  
 * testing?  
 * ~~imports? paths?~~  
 * ~~let user define which process.env vars should be injected + varPrefix~~
@@ -63,6 +76,10 @@ var connect             = require('connect')
         envVars:        process.env
     ,   envPrefix:      '$ENV__'
     ,   imgUrlPrefix:   process.env.ROOT_PATH + '/assets' // TBD
+    ,   mediaQueries:       {
+            'xs':       'only screen and (min-width: 666px)', // overwrite 'xs'
+            'custom':   'only screen and (max-width: 555px)'  // or define your own
+        }
     }
 
 function compile(str, path) {

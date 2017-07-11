@@ -1,34 +1,52 @@
 /**
- *	MEDIA QUERY - BLOCK MIXIN
- *	@uses in $mqs
+ *  MEDIA QUERY - BLOCK MIXIN
+ *  @uses in $mqs
  *
- * 	usage:
- * 	+MQ(mqname)
- *		#element
- *			css properties
- * 	or:
- * 	#element
- *		+MQ(mqname)
- *			css properties
+ *  usage:
+ *  +MQ(mqname)
+ *      #element
+ *          css properties
+ *  or:
+ *  #element
+ *      +MQ(mqname)
+ *          css properties
  */
+
+
 MQ(name='all')
-	@media $p23_mqs[name]
-		{block}
+    mediaString = lookup('$stylus_mq_' + name)
+    if mediaString is not null
+        @media mediaString
+            {block}
+    else
+    	// show error on top of page if MQ is not defined
+        if $ENV__NODE_ENV is not 'production'
+	        // ^[0]=ROOT / initial reference
+	        // => http://stylus-lang.com/docs/selectors.html#initial-reference
+            ^[0]:before
+                display block !important;
+                color #fff !important;
+                background-color red !important;
+                font-weight bold !important;
+                content '[doubleu23-stylus] Error: ' + 'mediaQuery "' + name + '" not defined!' !important;
+                border 1px solid red;
+                padding 0.5rem;
+                margin-bottom 0.5rem;
 
 
 /**
- *	Clearfix MIXIN
- *		used in _helpers=>.cf
+ *  Clearfix MIXIN
+ *      used in _helpers=>.cf
  *
- * 	usage:
- *	#element
- * 		cf()
+ *  usage:
+ *  #element
+ *      cf()
  */
 cf()
-	zoom 1
-	&:after
-	&:before
-		content ""
-		display table
-	&:after
-		clear both
+    zoom 1
+    &:after
+    &:before
+        content ""
+        display table
+    &:after
+        clear both
