@@ -16,10 +16,11 @@ removed leftovers + some refactoring
 **1.0.0** - **breaking changes:**  
 * renamed mq variables ($stylus_mq_{name})  
 * allows to pass mediaQueries per options ([#JavaScript API](#javascript-api))  
-* shows Error div on top of page if an undefined MQ name is used
-* ALWAYS (!) inject NODE_ENV (both ways: $ENV__NODE_ENV and {envPrefix + 'NODE_ENV'})
+* shows error-div on top of page if an undefined MQ name is used
+* ALWAYS (!) injects NODE_ENV (both ways: $ENV__NODE_ENV and {envPrefix + 'NODE_ENV'})
 
 **1.0.1** - fixxed: indentation errors (removed tabs)  
+**1.0.2** - fixxed: also show error-div _for non-root elements_
 
 **1.x.y** - **TBD:** release with new (final) name
 
