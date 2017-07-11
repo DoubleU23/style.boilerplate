@@ -2,6 +2,7 @@
   "name": "doubleu23-stylus",
   "version": "1.0.0",
   "description": "A little collection of mixins helpers and some other stuff",
+  "author": "Stefan Friedl",
   "main": "lib/doubleu23-stylus.js",
   "scripts": {
     "test": "npm test"
@@ -10,12 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/doubleu23/style.boilerplate.git"
   },
-  "keywords": [
-    "stylus",
-    "mediaqueries",
-    "mixins"
-  ],
-  "author": "Stefan Friedl",
+  "keywords": ["stylus", "mediaqueries", "mixins"],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/doubleu23/style.boilerplate/issues"
