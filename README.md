@@ -24,6 +24,9 @@ removed leftovers + some refactoring
 **1.x.y** - **TBD:** release with new (final) name
 
 ### Roadmap
+* remove /inc path
+  * remove imports in index.styl (just import what you need!)
+* ?rename "_reset.styl" to "_preset.styl"?
 * extended README  
   * migration to 1.0.0  
   * more infos for MQ mixin  
