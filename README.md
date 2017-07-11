@@ -14,11 +14,10 @@ removed leftovers + some refactoring
 **0.3.1** - removed auto-import and pushed doubleu23-stylus into import paths
 
 **1.0.0** - **breaking changes:**  
-* renamed mq variables  
-* allows to pass mediaQueries per options  
+* renamed mq variables ($stylus_mq_{name})  
+* allows to pass mediaQueries per options (see@[JavaScript API](#javascript-api))  
 * shows Error div on top of page if an undefined MQ name is used
 * ALWAYS (!) inject NODE_ENV (both ways: $ENV__NODE_ENV and {envPrefix + 'NODE_ENV'})
-* 
 
 **1.x.y** - **TBD:** release with new (final) name
 
@@ -31,8 +30,8 @@ removed leftovers + some refactoring
 * refactor "imgUrlPrefix"  
 * change package title  
 * testing (per ?mocha) if all imports and mixins are working  
-* user should be able to overwrite MQ breakpoints  (extend options)  
 * testing?  
+* ~~user should be able to overwrite MQ breakpoints (extend options)~~  
 * ~~imports? paths?~~  
 * ~~let user define which process.env vars should be injected + varPrefix~~
 
