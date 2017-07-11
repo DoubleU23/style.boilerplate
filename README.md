@@ -16,21 +16,16 @@ removed leftovers + some refactoring
 **1.0.0** - **TBD:** release with new (final) name
 
 ### Roadmap
-* change working title
+* change package title
 * testing (per ?mocha) if all imports and mixins are working  
-* user should be able to overwrite MQ breakpoints  
+* user should be able to overwrite MQ breakpoints  (extend options)
 * testing?  
-* imports? paths?
+* ~~imports? paths?~~  
 * ~~let user define which process.env vars should be injected + varPrefix~~
-
-## to be considered/refactored
-* autoinclude lib?
-* style.set('filename')?
 
 ## Usage
 ```Stylus
-// tbd - autoimport
-@require 'doubleu23-stylus'
+@import 'doubleu23-stylus'
 
 html,
 body
@@ -126,7 +121,6 @@ var options             = {
 ```
 
 ## Stylus Imports  
-> **not necessary, because of auto-include**
 
 To gain access to everything the lib has to offer, simply add:  
   ```stylus
