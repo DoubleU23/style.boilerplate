@@ -20,10 +20,10 @@ removed leftovers + some refactoring
 * ALWAYS (!) injects NODE_ENV (both ways: $ENV__NODE_ENV and {envPrefix + 'NODE_ENV'})
 
 **1.0.1** - fixxed: indentation errors (removed tabs)  
-**1.0.2** - fixxed: also show error-div _for non-root elements_
-**1.0.3** - always inject $ENV__NODE_ENV !
-**1.0.4** - **BROKEN BUILT!** - added ./normalize.styl for better import path
-**1.0.5** - fixxed identation errors (again :poop: )
+**1.0.2** - fixxed: also show error-div _for non-root elements_  
+**1.0.3** - always inject $ENV__NODE_ENV !  
+**1.0.4** - **BROKEN BUILT!** - added ./normalize.styl for better import path  
+**1.0.5** - fixxed identation errors (again :poop: )  
 
 **1.x.y** - **TBD:** release with new (final) name
 
