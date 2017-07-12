@@ -2,50 +2,6 @@
 > Stylus mixins, utilities, helpers, ...
 The main feature is the [MQ mixin](#mq-mixin)
 
-
-## Changelog:
-**0.1.1** - ready for Stylus.use() API  
-**0.1.8** - prefixed the vars - $p23_varname  
-**0.2.0** - stable [MQ's only import](#stylus-imports)  
-**0.2.1** - injects process.env.NODE_ENV into stylus (global var $ENV__NODE_ENV)  
-**0.2.3** - added assetPath() to use 'process.env.ROOT_PATH' as url-prefix  
-**0.3.0** - doubleu23-stylus now accepts options (envVars, envPrefix, imgUrlPrefix)  
-removed leftovers + some refactoring  
-**0.3.1** - removed auto-import and pushed doubleu23-stylus into import paths
-
-**1.0.0** - **BROKEN BUILT!** - **breaking changes:**   
-* renamed mq variables ($stylus_mq_{name})  
-* allows to pass mediaQueries per options ([#JavaScript API](#javascript-api))  
-* shows error-div on top of page if an undefined MQ name is used
-* ALWAYS (!) injects NODE_ENV (both ways: $ENV__NODE_ENV and {envPrefix + 'NODE_ENV'})
-
-**1.0.1** - fixxed: indentation errors (removed tabs)  
-**1.0.2** - fixxed: also show error-div _for non-root elements_  
-**1.0.3** - always inject $ENV__NODE_ENV !  
-**1.0.4** - **BROKEN BUILT!** - added ./normalize.styl for better import path  
-**1.0.5** - fixxed identation errors (again :poop: )  
-
-**1.x.y** - **TBD:** release with new (final) name
-
-### Roadmap
-* rethink/refactor "seperated MQ files" (see oldREADME)
-  * MQ "base"
-  * + documentation in README (wrap all in MQ, output files, mediaqueried style links, ...)  
-* remove /inc path
-  * remove imports in index.styl (just import what you need!)
-* ?rename "_reset.styl" to "_preset.styl"?
-* extended README  
-  * migration to 1.0.0  
-  * more infos for MQ mixin  
-  * describe file contents of /inc/*  
-* refactor "imgUrlPrefix"  
-* change package title  
-* testing (per ?mocha) if all imports and mixins are working  
-* testing?  
-* ~~user should be able to overwrite MQ breakpoints (extend options)~~  
-* ~~imports? paths?~~  
-* ~~let user define which process.env vars should be injected + varPrefix~~
-
 ## Usage
 ```Stylus
 @import 'doubleu23-stylus'
@@ -181,6 +137,49 @@ body
     margin-right 1px
 ```
 > **to avoid duplicate mediaqueries i use '[node-css-mqpacker](https://github.com/hail2u/node-css-mqpacker)' in my webpack setup**
+
+## Changelog:
+**0.1.1** - ready for Stylus.use() API  
+**0.1.8** - prefixed the vars - $p23_varname  
+**0.2.0** - stable [MQ's only import](#stylus-imports)  
+**0.2.1** - injects process.env.NODE_ENV into stylus (global var $ENV__NODE_ENV)  
+**0.2.3** - added assetPath() to use 'process.env.ROOT_PATH' as url-prefix  
+**0.3.0** - doubleu23-stylus now accepts options (envVars, envPrefix, imgUrlPrefix)  
+removed leftovers + some refactoring  
+**0.3.1** - removed auto-import and pushed doubleu23-stylus into import paths
+
+**1.0.0** - **BROKEN BUILT!** - **breaking changes:**   
+* renamed mq variables ($stylus_mq_{name})  
+* allows to pass mediaQueries per options ([#JavaScript API](#javascript-api))  
+* shows error-div on top of page if an undefined MQ name is used
+* ALWAYS (!) injects NODE_ENV (both ways: $ENV__NODE_ENV and {envPrefix + 'NODE_ENV'})
+
+**1.0.1** - fixxed: indentation errors (removed tabs)  
+**1.0.2** - fixxed: also show error-div _for non-root elements_  
+**1.0.3** - always inject $ENV__NODE_ENV !  
+**1.0.4** - **BROKEN BUILT!** - added ./normalize.styl for better import path  
+**1.0.5** - fixxed identation errors (again :poop: )  
+
+**1.x.y** - **TBD:** release with new (final) name
+
+### Roadmap
+* rethink/refactor "seperated MQ files" (see oldREADME)
+  * MQ "base"
+  * + documentation in README (wrap all in MQ, output files, mediaqueried style links, ...)  
+* remove /inc path
+  * remove imports in index.styl (just import what you need!)
+* ?rename "_reset.styl" to "_preset.styl"?
+* extended README  
+  * migration to 1.0.0  
+  * more infos for MQ mixin  
+  * describe file contents of /inc/*  
+* refactor "imgUrlPrefix"  
+* change package title  
+* testing (per ?mocha) if all imports and mixins are working  
+* testing?  
+* ~~user should be able to overwrite MQ breakpoints (extend options)~~  
+* ~~imports? paths?~~  
+* ~~let user define which process.env vars should be injected + varPrefix~~
 
 ## Contributors
   - [DoubleU23](https://github.com/DoubleU23) (Original Creator)
