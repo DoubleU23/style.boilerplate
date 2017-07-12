@@ -13,7 +13,7 @@ The main feature is the [MQ mixin](#mq-mixin)
 removed leftovers + some refactoring  
 **0.3.1** - removed auto-import and pushed doubleu23-stylus into import paths
 
-**1.0.0** - **breaking changes:**  
+**1.0.0** - **BROKEN BUILT!** - **breaking changes:**   
 * renamed mq variables ($stylus_mq_{name})  
 * allows to pass mediaQueries per options ([#JavaScript API](#javascript-api))  
 * shows error-div on top of page if an undefined MQ name is used
@@ -22,7 +22,8 @@ removed leftovers + some refactoring
 **1.0.1** - fixxed: indentation errors (removed tabs)  
 **1.0.2** - fixxed: also show error-div _for non-root elements_
 **1.0.3** - always inject $ENV__NODE_ENV !
-**1.0.4** - added ./normalize.styl for better import path
+**1.0.4** - **BROKEN BUILT!** - added ./normalize.styl for better import path
+**1.0.5** - fixxed identation errors (again :poop: )
 
 **1.x.y** - **TBD:** release with new (final) name
 
