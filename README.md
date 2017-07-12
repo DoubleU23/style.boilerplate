@@ -21,6 +21,7 @@ removed leftovers + some refactoring
 
 **1.0.1** - fixxed: indentation errors (removed tabs)  
 **1.0.2** - fixxed: also show error-div _for non-root elements_
+**1.0.3** - always inject $ENV__NODE_ENV !
 
 **1.x.y** - **TBD:** release with new (final) name
 
