@@ -22,10 +22,13 @@ removed leftovers + some refactoring
 **1.0.1** - fixxed: indentation errors (removed tabs)  
 **1.0.2** - fixxed: also show error-div _for non-root elements_
 **1.0.3** - always inject $ENV__NODE_ENV !
+**1.0.4** - mv ./inc/reset.styl ./normalize.styl && added MQ "base" (= "only screen")
 
 **1.x.y** - **TBD:** release with new (final) name
 
 ### Roadmap
+* rethink/refactor "seperated MQ files" (see oldREADME)
+  * + documentation in README (wrap all in MQ, output files, mediaqueried style links, ...)  
 * remove /inc path
   * remove imports in index.styl (just import what you need!)
 * ?rename "_reset.styl" to "_preset.styl"?
@@ -33,7 +36,6 @@ removed leftovers + some refactoring
   * migration to 1.0.0  
   * more infos for MQ mixin  
   * describe file contents of /inc/*  
-* seperated MQ files (see oldREADME) + documentation in README  
 * refactor "imgUrlPrefix"  
 * change package title  
 * testing (per ?mocha) if all imports and mixins are working  
