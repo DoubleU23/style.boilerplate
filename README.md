@@ -160,6 +160,7 @@ removed leftovers + some refactoring
 **1.0.4** - **BROKEN VERSION!** - added ./normalize.styl for better import path  
 **1.0.5** - **BROKEN VERSION!** fixxed identation errors (again :poop: )  
 **1.0.6** - fixxed - removed base mq in ./inc/normalize (will be added back in next versions)  
+**1.0.7** - do NOT push __dirname into paths (double located filenames break build)
 
 **1.x.y** - **TBD:** release with new (final) name
 
