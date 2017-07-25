@@ -166,6 +166,7 @@ removed leftovers + some refactoring
 **1.0.10** - removed "set filename"
 **1.0.11** - fixxed undefined options
 **1.0.12** - fixxed undefined options! (:see_no_evil: maybe im drunk :beer:)  
+**1.0.13** - :monkey: fixxed undefined options! ( :zzz: should get some sleep! :zzz:)
 
 **1.x.y** - **TBD:** release with new (final) name
 
