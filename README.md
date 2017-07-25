@@ -163,6 +163,7 @@ removed leftovers + some refactoring
 **1.0.7** - do NOT push __dirname into paths (double located filenames break build)
 **1.0.8** - fix error "if no options given" (preset options to {})
 **1.0.9** - fixxed presetting options +++ push __dirname into paths!
+**1.0.10** - removed "set filename"
 
 **1.x.y** - **TBD:** release with new (final) name
 
