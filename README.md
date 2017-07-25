@@ -164,7 +164,8 @@ removed leftovers + some refactoring
 **1.0.8** - fix error "if no options given" (preset options to {})
 **1.0.9** - fixxed presetting options +++ push __dirname into paths!
 **1.0.10** - removed "set filename"
-**1.0.10** - fixxed undefined options
+**1.0.11** - fixxed undefined options
+**1.0.12** - fixxed undefined options! (:see_no_evil: maybe im drunk :beer:)  
 
 **1.x.y** - **TBD:** release with new (final) name
 
