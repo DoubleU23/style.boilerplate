@@ -160,11 +160,11 @@ removed leftovers + some refactoring
 **1.0.4** - **BROKEN** - added ./normalize.styl for better import path  
 **1.0.5** - **BROKEN** fixxed identation errors (again :poop: )  
 **1.0.6** - fixxed - removed base mq in ./inc/normalize (will be added back in next versions)  
-**1.0.7** - do NOT push __dirname into paths (double located filenames break build)
-**1.0.8** - fix error "if no options given" (preset options to {})
-**1.0.9** - **BROKEN** fixxed presetting options +++ push __dirname into paths!
-**1.0.10** - **BROKEN** removed "set filename"
-**1.0.11** - **BROKEN** fixxed undefined options
+**1.0.7** - do NOT push __dirname into paths (double located filenames break build)  
+**1.0.8** - fix error "if no options given" (preset options to {})  
+**1.0.9** - **BROKEN** fixxed presetting options +++ push __dirname into paths!  
+**1.0.10** - **BROKEN** removed "set filename"  
+**1.0.11** - **BROKEN** fixxed undefined options  
 **1.0.12** - **BROKEN** fixxed undefined options! (:see_no_evil: maybe im drunk :beer:)  
 **1.0.13** - :monkey: fixxed undefined options! ( :zzz: should get some sleep! :zzz:)
 
